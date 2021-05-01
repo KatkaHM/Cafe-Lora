@@ -39,21 +39,3 @@ export const Drink = (props) => {
 
   return drink;
 };
-
-/* <div class="drink">
-  <div class="drink__product">
-    <div class="drink__cup">
-      <img src="/assets/cups/cappuccino.png" />
-    </div>
-    <div class="drink__info">
-      <h3>Cappuccino</h3>
-      <div class="layer">
-        <div class="layer__color" style="background-color: #feeeca"></div>
-        <div class="layer__label">mléčná pěna</div>
-      </div>
-    </div>
-  </div>
-  <div class="drink__controls">
-    <button class="order-btn">Objednat</button>
-  </div>
-</div>; */
