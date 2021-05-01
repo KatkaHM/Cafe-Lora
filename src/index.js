@@ -36,7 +36,26 @@ const drinkListElm = document.querySelector('.drinks-list');
 // drinkInfoElm.appendChild(Layer(layers[1]));
 // drinkInfoElm.appendChild(Layer(layers[2]));
 
-const drinkList = [
+const drinks = [
+  {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    ordered: false,
+    layers: [
+      {
+        color: '#feeeca',
+        label: 'mléčná pěna',
+      },
+      {
+        color: '#fed7b0',
+        label: 'teplé mléko',
+      },
+      {
+        color: '#613916',
+        label: 'espresso',
+      },
+    ],
+  },
   {
     id: 'romano',
     name: 'Romano',
@@ -54,7 +73,13 @@ const drinkList = [
   },
 ];
 
-drinkListElm.appendChild(Drink(drinkList[0]));
+// drinks.forEach((drink) => drinkListElm.appendChild(Drink(drink)));
+
+fetch('https://apps.kodim.cz/daweb/cafelora/api/drinks')
+  .then((response) => response.json())
+  .then((json) => {
+    json.forEach((drink) => drinkListElm.appendChild(Drink(drink)));
+  });
 
 // const orderBtnElm = document.querySelector('.order-btn');
 // const drinkCupElm = document.querySelector('.drink__cup');
