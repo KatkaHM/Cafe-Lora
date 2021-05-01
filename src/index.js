@@ -56,18 +56,18 @@ const drinkList = [
 
 drinkListElm.appendChild(Drink(drinkList[0]));
 
-const orderBtnElm = document.querySelector('.order-btn');
-const drinkCupElm = document.querySelector('.drink__cup');
-let isOrdered = false;
+// const orderBtnElm = document.querySelector('.order-btn');
+// const drinkCupElm = document.querySelector('.drink__cup');
+// let isOrdered = false;
 
-orderBtnElm.addEventListener('click', () => {
-  if (isOrdered === true) {
-    orderBtnElm.textContent = 'Objednat';
-    drinkCupElm.classList.remove('drink__cup--selected');
-    isOrdered = !isOrdered;
-  } else {
-    orderBtnElm.textContent = 'Zrušit';
-    drinkCupElm.classList.add('drink__cup--selected');
-    isOrdered = !isOrdered;
-  }
-});
+// orderBtnElm.addEventListener('click', () => {
+//   if (isOrdered === true) {
+//     orderBtnElm.textContent = 'Objednat';
+//     drinkCupElm.classList.remove('drink__cup--selected');
+//     isOrdered = !isOrdered;
+//   } else {
+//     orderBtnElm.textContent = 'Zrušit';
+//     drinkCupElm.classList.add('drink__cup--selected');
+//     isOrdered = !isOrdered;
+//   }
+// });

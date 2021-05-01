@@ -19,9 +19,23 @@ export const Drink = (props) => {
       <button class="order-btn">Objednat</button>
     </div>`;
 
+  //layers
   const drinkInfoElm = drink.querySelector('.drink__info');
-  // layers.forEach((layer) => (drinkInfoElm.innerHTML += Layer(layer)));
   layers.forEach((layer) => drinkInfoElm.appendChild(Layer(layer)));
+
+  //order btn
+  const orderBtnElm = drink.querySelector('.order-btn');
+  const drinkCupElm = drink.querySelector('.drink__cup');
+
+  orderBtnElm.addEventListener('click', () => {
+    if (ordered === true) {
+      orderBtnElm.textContent = 'Objednat';
+      drinkCupElm.classList.remove('drink__cup--selected');
+    } else {
+      orderBtnElm.textContent = 'Zrušit';
+      drinkCupElm.classList.add('drink__cup--selected');
+    }
+  });
 
   return drink;
 };
